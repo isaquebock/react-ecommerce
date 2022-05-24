@@ -75,7 +75,7 @@ const Navbar = () => {
           </Left>
 
           <Center>
-            <Logo>LOVE</Logo>
+            <Logo>learn</Logo>
           </Center>
 
           <Right>

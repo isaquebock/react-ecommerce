@@ -4,11 +4,16 @@
 
 ### Tópicos que vão ser ensinados
 
-- Conceitos de básicos de React
+**Styled Components**
+- Conceitos básicos
+- Props
+
+**React**
+- Conceitos básicos
 - React Hooks
 - Props
 
-Estruturas de e-commerces como: 
+**Estruturas de e-commerces como:** 
 - Navbar
 - Carrossel
 - Seção de Categorias

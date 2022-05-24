@@ -37,14 +37,14 @@ const Wrapper = styled.div`
     height: 100%;
     display: flex;
     transform: translateX(${props => props.slideIndex * -100}vw);
-    transition: .6s ease-in-out;
+    transition: all 1s ease;
 `
 
 const Slider = () => {
 
     const [slideIndex, setSlideIndex] = useState(0)
-    const handleClick = dir => {
 
+    const handleClick = dir => {
         if(dir === 'left') {
             setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
         } else {
