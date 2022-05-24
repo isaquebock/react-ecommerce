@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components"
 
 import { ArrowBack, ArrowForward } from '@mui/icons-material/';
 
-import images from '../images';
+import Slide from './Slide';
 
+import { sliderItems } from '../data';
 
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: coral;
     position: relative;
+    overflow: hidden;
 `
 
 const Arrow = styled.div`
@@ -29,66 +30,45 @@ const Arrow = styled.div`
     right: ${props => props.direction  === 'right' && '10px'};
     cursor: pointer;
     opacity: .5;
+    z-index: 2;
 `
 
 const Wrapper = styled.div`
     height: 100%;
-`
-
-const Slide = styled.div`
     display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-`
-const ImageContainer = styled.div`
-    flex: 1;
-    height: 100%;
-`
-
-const Image = styled.img`
-`
-
-const InfoContainer = styled.div`
-    flex: 1;
-    padding: 50px;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-`
-
-const Title = styled.h2`
-`
-const Description = styled.p`
-`
-const Button = styled.button`
+    transform: translateX(${props => props.slideIndex * -100}vw);
+    transition: .6s ease-in-out;
 `
 
 const Slider = () => {
-  return (
-    <Container>
-        <Arrow direction="left">
-            <ArrowBack />
-        </Arrow>
 
-        <Wrapper>
-            <Slide>
-            <ImageContainer>
-                <Image src={images[0].fullbanner_image1}></Image>
-            </ImageContainer>
-            <InfoContainer>
-                <Title>Lorem Ipsum</Title>
-                <Description>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Description>
-                <Button>Shop Now</Button>
-            </InfoContainer>
-            </Slide>
-        </Wrapper>
+    const [slideIndex, setSlideIndex] = useState(0)
+    const handleClick = dir => {
 
-        <Arrow direction="right">
-            <ArrowForward />
-        </Arrow>
-    </Container>
-  )
+        if(dir === 'left') {
+            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
+        }
+    }
+
+    return (
+        <Container>
+            <Arrow direction="left" onClick={() => handleClick("left")}>
+                <ArrowBack />
+            </Arrow>
+
+            <Wrapper slideIndex={slideIndex}>
+                {sliderItems.map(item => (
+                    <Slide imageSrc={item.image} title={item.title} description={item.description} buttonName={item.button} key={item.id}></Slide>
+                ))}
+            </Wrapper>
+
+            <Arrow direction="right" onClick={() => handleClick("right")}>
+                <ArrowForward />
+            </Arrow>
+        </Container>
+    )
 }
 
 export default Slider
