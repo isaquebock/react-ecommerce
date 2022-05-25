@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { devices } from '../responsive'
 
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 `
 
 const Filter = styled.div`

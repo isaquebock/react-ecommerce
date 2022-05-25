@@ -3,9 +3,16 @@ import styled from 'styled-components'
 
 import { Facebook, Twitter, Instagram, Pinterest, Room, Phone } from '@mui/icons-material/';
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
     display: flex;
     background: white;
+    flex-direction: column;
+    
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 `
 
 const Left = styled.div`

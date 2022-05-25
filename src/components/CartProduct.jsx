@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Add, Remove } from '@mui/icons-material'
+import { devices } from '../responsive'
 
 const Product = styled.div`
     display: flex;
@@ -10,14 +11,33 @@ const Product = styled.div`
     border: 1px solid lightgray;
     margin-bottom: 1rem;
     border-radius: 5px;
+
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 `
 const ProductDetail = styled.div`
     flex: 2;
     display: flex;
+
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 `
 
 const Image = styled.img`
-    width: 200px;
+    width: 250px;
+    margin: 0 auto;
+
+    @media${devices.laptop} {
+        width: 200px;
+        margin: 0;
+        margin-left: 1rem;
+    }
 `
 const Details = styled.div`
     padding: 20px;

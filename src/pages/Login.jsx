@@ -4,16 +4,24 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Announcement from '../components/Announcement'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
 
 `
 const Wrapper = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #fcf5f5;
+
+    @media${devices.laptop} {
+        height: 80vh;
+        background: transparent;
+    }
 
 `
 const Title = styled.h2`
@@ -24,12 +32,17 @@ const Title = styled.h2`
     margin-bottom: 1rem;
 `
 const Form = styled.form`
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     background: #fcf5f5;
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 1.25rem;
+
+    @media${devices.laptop} {
+        width: 50%;
+        padding: 2rem;
+    }
 `
 const Input = styled.input`
     flex: 1;

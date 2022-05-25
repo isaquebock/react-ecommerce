@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Announcement from '../components/Announcement'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
 
 `
@@ -14,6 +16,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #fcf5f5;
+    
+    @media${devices.laptop} {
+        background: transparent;
+    }
 
 `
 const Title = styled.h2`
@@ -24,12 +31,18 @@ const Title = styled.h2`
     margin-bottom: 1rem;
 `
 const Form = styled.form`
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     background: #fcf5f5;
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 1.25rem;
+
+    @media${devices.laptop} {
+        width: 50%;
+        padding: 2rem;
+        background: #fcf5f5;
+    }
 `
 const Input = styled.input`
     flex: 1;

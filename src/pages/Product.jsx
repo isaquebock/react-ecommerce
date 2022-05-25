@@ -5,12 +5,19 @@ import Footer from '../components/Footer'
 import Announcement from '../components/Announcement'
 import Newsletter from '../components/Newsletter'
 import { Add, Remove } from '@mui/icons-material'
+import { devices } from '../responsive'
 
 const Container = styled.div``
 
 const Wrapper = styled.div`
-    padding: 50px;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+        padding: 50px;
+    }
 `
 
 const ImageContainer = styled.div`
@@ -22,7 +29,11 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 0 30px;
+    padding: 0px;
+
+    @media${devices.laptop} {
+        padding: 0 30px;
+    }
 `
 const Title = styled.h2`
     font-weight: 200;

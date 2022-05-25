@@ -2,6 +2,8 @@ import React from 'react'
 import { Send } from '@mui/icons-material';
 import styled from 'styled-components'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
     height: 60vh;
     background: #fcf5f5;
@@ -9,6 +11,11 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
+
+    @media${devices.laptop} {
+        padding: 0;
+    }
 `
 
 const Title = styled.h2`
@@ -18,18 +25,27 @@ const Title = styled.h2`
 `
 
 const Description = styled.p`
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: 300;
     color: #161616;
+    text-align: center;
+
+    @media${devices.laptop} {
+        font-size: 24px;
+    }
 `
 
 const InputContainer = styled.div`
-    width: 50%;
+    width: 80%;
     height: 40px;
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
+
+    @media${devices.laptop} {
+        width: 50%;
+    }
 `
 
 const Input = styled.input`

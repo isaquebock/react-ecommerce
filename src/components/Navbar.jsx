@@ -4,35 +4,56 @@ import { Search } from '@material-ui/icons'
 import { Badge } from '@mui/material';
 import { ShoppingBagOutlined } from '@mui/icons-material';
 
+import { devices } from '../responsive'
 
 const Container = styled.div`
-  height: 60px;
+  height: 50px;
   background: white;
+
+  @media${devices.laptop} {
+    height: 60px;
+  }
 `
 
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media${devices.laptop} {
+    padding: 10px 20px;
+  }
 `
 
 const Language = styled.span`
+  display: none;
   font-size: 14px;
   cursor: pointer;
 
+  @media${devices.laptop} {
+    display: block;
+  }
 `
 
 const SearchContainer = styled.div`
   border: .5px solid lightgray;
   display: flex;
   align-items: center;
-  margin-left: 25px;
   padding: 5px;
+
+  @media${devices.laptop} {
+    margin-left: 25px;
+  }
 `
 
 const Input = styled.input`
   border: none;
+  width: 60px;
+
+  @media${devices.laptop} {
+    width: auto;
+  }
 `
 
 // Navbar positions
@@ -60,7 +81,11 @@ const Right = styled.div`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
-  margin-left: 25px;
+  margin-left: 5px;
+
+  @media${devices.laptop} {
+    margin-left: 25px;
+  }
 `
 
 const Navbar = () => {
@@ -70,7 +95,7 @@ const Navbar = () => {
           <Left>
             <Language>PT</Language>
             <SearchContainer>
-              <Input/>
+              <Input placeholder="Buscar"/>
               <Search style={{ color: 'gray', fontSize: '14px' }}/>
             </SearchContainer>
           </Left>

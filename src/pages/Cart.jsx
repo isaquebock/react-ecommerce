@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import { cartProducts as products } from '../data'
 import CartProduct from '../components/CartProduct'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
     background: #fafafa;
 `
@@ -18,6 +20,7 @@ const Wrapper = styled.div`
 const Title = styled.h2`
     font-weight: 300;
     text-align: center;
+    margin-bottom: 1rem;
 `
 
 const Top = styled.div`
@@ -47,6 +50,12 @@ const TopButton = styled.button`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 `
 const Info = styled.div`
     flex: 3;
@@ -55,12 +64,16 @@ const Summary = styled.div`
     flex: 1;
     border: 1px solid lightgray;
     padding: 15px;
-    height: 50vh;
+    height: 35vh;
     background: white;
-    margin-left: 1rem;
+
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
+
+    @media${devices.laptop} {
+        margin-left: 1rem;
+    }
 `
 
 const SummaryTitle = styled.h3`
