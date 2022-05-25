@@ -24,7 +24,9 @@ Conteúdo desse repositório será ensinado em live. (twitch.tv/isaquebock)
 - Listagem de Produtos
 - Estruturas de Filtros
 - Estruturas de Atributos
-+
+- Página de Login/Registrar
+- Popup
+- Carrinho
 
 ## Sobre o projeto
 
