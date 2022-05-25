@@ -93,4 +93,23 @@ export const products = [
       name: 'Product Name',
       price: 99
     }
-  ]
+]
+
+export const cartProducts = [
+  {
+    id: 1,
+    image: 'https://cdn-images.farfetch-contents.com/16/58/08/85/16580885_35986495_1000.jpg',
+    name: 'Product Name',
+    price: 99,
+    color: '#ffffff',
+    size: 'M'
+  },
+  {
+    id: 2,
+    image: 'https://cdn-images.farfetch-contents.com/18/47/01/71/18470171_39681269_1000.jpg',
+    name: 'Product Name',
+    price: 99,
+    color: '#000000',
+    size: 'GG'
+  }
+]

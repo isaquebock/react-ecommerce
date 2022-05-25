@@ -7,6 +7,7 @@ import { ShoppingBagOutlined } from '@mui/icons-material';
 
 const Container = styled.div`
   height: 60px;
+  background: white;
 `
 
 const Wrapper = styled.div`

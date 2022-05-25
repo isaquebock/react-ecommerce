@@ -5,6 +5,7 @@ import ProductList from "./pages/ProductList"
 import Product from "./pages/Product"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/carrinho">
+            <Cart />
           </Route>
         </Switch>
     </Router>

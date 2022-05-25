@@ -7,6 +7,7 @@
 **Styled Components**
 - Conceitos básicos
 - Props
+- Responsividade
 
 **React**
 - Conceitos básicos
@@ -21,11 +22,15 @@
 - Newsletter
 - Footer
 - Listagem de Produtos
+- Estruturas de Filtros
+- Estruturas de Atributos
 
 ### Rotas Disponíveis
-/products
-/product/product-test
-/cart
+- /produtos
+- /produtos/produto-teste
+- /carrinho
+- /registrar
+- /login
 
 ## Available Scripts
 

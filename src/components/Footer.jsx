@@ -5,6 +5,7 @@ import { Facebook, Twitter, Instagram, Pinterest, Room, Phone } from '@mui/icons
 
 const Container = styled.div`
     display: flex;
+    background: white;
 `
 
 const Left = styled.div`
