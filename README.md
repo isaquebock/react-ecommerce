@@ -11,6 +11,7 @@
 **React**
 - Conceitos básicos
 - React Hooks
+- React Router V5
 - Props
 
 **Estruturas de e-commerces como:** 
@@ -18,6 +19,13 @@
 - Carrossel
 - Seção de Categorias
 - Newsletter
+- Footer
+- Listagem de Produtos
+
+### Rotas Disponíveis
+/products
+/product/product-test
+/cart
 
 ## Available Scripts
 
