@@ -113,3 +113,14 @@ export const cartProducts = [
     size: 'GG'
   }
 ]
+
+export const popupInfos = {
+  image: 'https://images.lojanike.com.br/1024x1024/produto/tenis-air-force-1-07-lv8-ath-DH7568-002-11-111638986238.jpg',
+  title: 'New Collection',
+  subtitle: 'Nike Air Force',
+  button: 'Shop Now',
+  colors: {
+    primary: '#e6c655',
+    secondary: '#f6f6f6'
+  }
+}

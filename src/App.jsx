@@ -6,10 +6,14 @@ import Product from "./pages/Product"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import Cart from "./pages/Cart";
+import NewsletterPopup from "./components/NewsletterPopup";
+import GlobalStyle from './globalStyles'
 
 const App = () => {
   return (
-    <Router>
+    <>
+      <GlobalStyle/>
+      <Router>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -30,7 +34,10 @@ const App = () => {
             <Cart />
           </Route>
         </Switch>
-    </Router>
+
+        <NewsletterPopup />
+      </Router>
+    </>
   );
 };
 
