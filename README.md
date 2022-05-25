@@ -1,4 +1,5 @@
 # Mini plataforma de e-commerce em React (WIP)
+Preview: https://react-ecommerce-lemon.vercel.app/
 
 Conteúdo desse repositório será ensinado em live. (twitch.tv/isaquebock)
 
