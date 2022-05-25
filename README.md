@@ -1,13 +1,13 @@
-# E-commerce em React (WIP)
+# Mini plataforma de e-commerce em React (WIP)
 
-## Conteúdo desse repositório será ensinado em live. (twitch.tv/isaquebock)
+Conteúdo desse repositório será ensinado em live. (twitch.tv/isaquebock)
 
-### Tópicos que vão ser ensinados
+## Tópicos que vão ser ensinados
 
 **Styled Components**
 - Conceitos básicos
 - Props
-- Responsividade
+- Responsividade (Mobile First)
 
 **React**
 - Conceitos básicos
@@ -24,6 +24,9 @@
 - Listagem de Produtos
 - Estruturas de Filtros
 - Estruturas de Atributos
++
+
+## Sobre o projeto
 
 ### Rotas Disponíveis
 - /produtos
