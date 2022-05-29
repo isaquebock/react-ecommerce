@@ -5,6 +5,8 @@ import { Close } from '@mui/icons-material';
 
 import { popupInfos as popup } from '../data'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -25,9 +27,14 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
     width: 60%;
-    height: 50vh;
+    height: 55vh;
     display: flex;
     position: relative;
+    flex-direction: column;
+
+    @media${devices.laptop} {
+        flex-direction: row;
+    }
 
     svg {
         position: absolute;
@@ -37,6 +44,7 @@ const Wrapper = styled.div`
         border-radius: 50%;
         padding: .2rem;
         cursor: pointer;
+        z-index: 10;
     }
 
     &:hover {
@@ -46,8 +54,12 @@ const Wrapper = styled.div`
     }
 `
 const ImageContainer = styled.div`
-    flex: 2;
+    flex: 1;
     overflow: hidden;
+
+    @media${devices.laptop} {
+        flex: 2;
+    }
 `
 const Image = styled.img`
     width: 100%;

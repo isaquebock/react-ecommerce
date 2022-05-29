@@ -1,9 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { devices } from '../responsive'
+
 const Container = styled.div`
     position: relative;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    @media${devices.laptop} {
+        display: block;
+    }
 `
 
 const Image = styled.img`
@@ -18,12 +26,16 @@ const Info = styled.div`
     top: 0;
     left: 0;
     opacity: 0;
-    width: 100%;
+    width: 85%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     transition: all 1s ease;
+
+    @media${devices.laptop} {
+        width: 100%;
+    }
 
     &:hover {
         opacity: 1;
